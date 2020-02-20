@@ -9,7 +9,7 @@ public class CreditCard {
 	private String symbol = EZI;
 	
 
-	CreditCard(String owner, String number) {
+	public CreditCard(String owner, String number) {
 		this.owner = owner;
 		this.number = number;
 	}
