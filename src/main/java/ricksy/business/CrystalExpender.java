@@ -4,8 +4,8 @@ import ricksy.business.CreditCard;
 
 public class CrystalExpender implements GuestDispatcher {
 	
-	private int stock = 3;
-	private int itemcost = 50;
+	private final int stock = 3;
+	private final int itemcost = 50;
 	
 
 	CrystalExpender(int stock, int itemcost) {

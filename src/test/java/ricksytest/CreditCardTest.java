@@ -21,11 +21,5 @@ public class CreditCardTest {
 		
 	}
 	
-	@test
-	
-	public void toStringTest () {
-		CreditCard crecard = new CreditCard("Abradoplh", "4916119711304546" );
-		
-	}
 	
 }
