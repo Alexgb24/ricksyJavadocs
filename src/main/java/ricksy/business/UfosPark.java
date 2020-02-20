@@ -1,26 +1,32 @@
 package ricksy.business;
 
 import java.util.HashMap;
+import java.util.List;
+import ricksy.business.CreditCard;
 
-public class UfosPark {
+public class UfosPark implements GuestDispatcher {
 	
 	private String fee = null;
-	
+	private List<Object> flota = null;
+	HashMap<CreditCard, String> ufoasignado = new HashMap<CreditCard, String>();
 
 	public void add(String ovni) {
-		
-		
-	}
-
-	public void dispatch(CreditCard owner) {
-ASIGNA UFO COBRA TARJETA
+		flota.add(ovni);
 		
 	}
 
-
-	public char[] getUfoOf(String number) {
+	public void dispatch(CreditCard crecard) {
+			if 
 		
-		return null;
+	}
+
+
+	public String getUfoOf(CreditCard crecard) {
+		for (CreditCard credcard : ufoasignado.getValue()) {
+			return ufoasignado.get(crecard);
+		}
+		
+		
 	}
 
 }

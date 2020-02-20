@@ -5,8 +5,8 @@ public class CreditCard {
 
 	private String owner = null;
 	private String number = null;
-	private double credit = 3000d;
-	private String symbol = EZI;
+	double credit = 3000d;
+	private String symbol = "EZI";
 	
 
 	public CreditCard(String owner, String number) {
