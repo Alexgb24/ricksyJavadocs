@@ -26,7 +26,9 @@ public class CrystalExpender implements GuestDispatcher {
 		return this.stock;
 	}
 		
-	
+	/**
+	 * No he podido comprobar si compiña
+	 */
 
 	@Override
     public String toString() {

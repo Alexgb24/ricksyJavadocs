@@ -16,13 +16,15 @@ public class UfosPark implements GuestDispatcher {
 	}
 
 	public void dispatch(CreditCard crecard) {
-			if 
+		/**
+		 * No compila	
+		 */
 		
 	}
 
 
 	public String getUfoOf(CreditCard crecard) {
-		for (CreditCard credcard : ufoasignado.getValue()) {
+		for (CreditCard key : ufoasignado.keySet())
 			return ufoasignado.get(crecard);
 		}
 		

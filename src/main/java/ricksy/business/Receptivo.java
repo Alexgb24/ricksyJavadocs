@@ -8,7 +8,7 @@ public class Receptivo {
 	List<UfosPark> uforegister = null;
 	
 	public void dispatch(CreditCard crecard) {
-		crecard.pay(payment);
+		crecard.pay
 		
 	}
 	public void registra(CrystalExpender packExpender) {
@@ -17,6 +17,8 @@ public class Receptivo {
 	public void registra(UfosPark ufosPark) {
 		uforegister.add(ufosPark);
 		
-		
+		/**
+		 * No he comprobado si compila
+		 */
 	}
 }

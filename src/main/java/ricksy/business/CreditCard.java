@@ -9,6 +9,9 @@ public class CreditCard {
 	private String symbol = "EZI";
 	
 
+		/**
+		 * No he comprobdo si compila
+		 */
 	public CreditCard(String owner, String number) {
 		this.owner = owner;
 		this.number = number;
@@ -42,3 +45,4 @@ public class CreditCard {
         return creditcard.toString();
     }
 }
+
