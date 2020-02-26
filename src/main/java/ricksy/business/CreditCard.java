@@ -5,7 +5,7 @@ public class CreditCard {
 
 	private String owner = null;
 	private String number = null;
-	double credit = 3000;
+	double credit = 3000d;
 	private String symbol = "EZI";
 	
 	String creditstr = String.valueOf(credit);
