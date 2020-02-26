@@ -2,38 +2,46 @@ package ricksy.business;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import ricksy.business.CreditCard;
 
 public class UfosPark implements GuestDispatcher {
 	
-	private int fee = 500;
+	private double fee = 500d;
 	private ArrayList<String> flota = new ArrayList<String>();
-	private Map<String, String> ufoasignado = new HashMap<String, String>();
-
-	public void add(String ovni) {
-		flota.add(ovni);
-		
-	}
+	private ArrayList<String> ufos = new ArrayList<String>(); 
+	private Map<String, String> ufoasignado = new HashMap <String, String>();
 
 	public void dispatch(CreditCard crecard) {
-		for (String ovni: flota) {
-			if (ovni == null) {
-				flota.remove(ovni);
-				/** CreditCard.credit -= fee; */
+		if (this.getUfoAsignado().containsKey(crecard.number())) {
+			
+		}
+		else {
+			if (crecard.credit() >= this.fee && this.flota.size() > 0 ) {
+				crecard.pay(fee);
+				this.ufoasignado.put(crecard.number(), this.flota.remove(0));
 			}
+		}
 		
 	}
-		
-		
+	
+	public String getUfoOf(String nombre) {
+		return this.ufoasignado.get(nombre);
 	}
-
-	public String getUfoOf(String number) {
-		for (String key : ufoasignado.keySet())
-		return ufoasignado.get(number);
-		return number;
+	public String toString(){
+		return ufos.toString();
+	}
+	
+	public Map<String, String> getUfoAsignado(){
+		return this.ufoasignado;
+	}
+	
+	public ArrayList<String> getFlota(){
+		return flota;
+	}
+	
+	public void add(String idovni) {
+		this.flota.add(idovni);
+		this.ufos.add(idovni);
 	}
 
 }
