@@ -4,7 +4,7 @@ import ricksy.business.CreditCard;
 
 public class CrystalExpender implements GuestDispatcher {
 	
-	private final int stock = 3;
+	private int stock = 3;
 	private final int itemcost = 50;
 	
 
@@ -14,12 +14,15 @@ public class CrystalExpender implements GuestDispatcher {
 	}
 
 	public void dispatch(CreditCard crecard) {
-		if (crecard.credit > itemcost)
-			this.stock = this.stock + 1;
-		else
-			this.stock = this.stock + 0;
-		if (stock > 0)
-			crecard.credit = crecard.credit - itemcost;
+		if (crecard.credit >= itemcost) {
+			this.stock -= 1; }	
+		else {
+			this.stock = this.stock - 0; }
+		if (stock > 0) {
+			crecard.credit = crecard.credit - itemcost; }
+		else {
+			crecard.credit = crecard.credit - 0;
+			this.stock = 0; }
 		
 	}	
 	public int stock() {
@@ -27,13 +30,13 @@ public class CrystalExpender implements GuestDispatcher {
 	}
 		
 	/**
-	 * No he podido comprobar si compiña
+	 * No he podido comprobar si compila
 	 */
 
 	@Override
     public String toString() {
         StringBuilder information = new StringBuilder();
-        information.append("owner=" + getOwner());
+        information.append("owner=" + owner);
         information.append(", number=" + number());
         information.append(", credit=" + credit());
         information.append(", Packs=" + stock());
