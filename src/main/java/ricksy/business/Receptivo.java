@@ -3,12 +3,11 @@ package ricksy.business;
 import java.util.List;
 import ricksy.business.CreditCard;
 
-public class Receptivo {
+public class Receptivo implements GuestDispatcher{
 	List<CrystalExpender> crystalregister = null;
 	List<UfosPark> uforegister = null;
 	
 	public void dispatch(CreditCard crecard) {
-		crecard.pay
 		
 	}
 	public void registra(CrystalExpender packExpender) {
@@ -17,8 +16,5 @@ public class Receptivo {
 	public void registra(UfosPark ufosPark) {
 		uforegister.add(ufosPark);
 		
-		/**
-		 * No he comprobado si compila
-		 */
 	}
 }

@@ -3,13 +3,15 @@ package ricksy.business;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import ricksy.business.CreditCard;
 
 public class UfosPark implements GuestDispatcher {
 	
 	private int fee = 500;
 	private ArrayList<String> flota = new ArrayList<String>();
-	private HashMap<String, String> ufoasignado = new HashMap<String, String>();
+	private Map<String, String> ufoasignado = new HashMap<String, String>();
 
 	public void add(String ovni) {
 		flota.add(ovni);
@@ -20,7 +22,7 @@ public class UfosPark implements GuestDispatcher {
 		for (String ovni: flota) {
 			if (ovni == null) {
 				flota.remove(ovni);
-				this.credit -= fee;
+				/** CreditCard.credit -= fee; */
 			}
 		
 	}

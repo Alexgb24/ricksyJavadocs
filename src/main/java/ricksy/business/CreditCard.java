@@ -5,7 +5,7 @@ public class CreditCard {
 
 	private String owner = null;
 	private String number = null;
-	double credit = 3000d;
+	double credit = 3000;
 	private String symbol = "EZI";
 	
 	String creditstr = String.valueOf(credit);
@@ -13,6 +13,10 @@ public class CreditCard {
 	public CreditCard(String owner, String number) {
 		this.owner = owner;
 		this.number = number;
+	}
+	
+	public double credit() {
+		return credit;
 	}
 
 	public void setNumber(String numero) {
@@ -31,9 +35,6 @@ public class CreditCard {
 			return false;
 	}
 	
-	public String credit() {
-		return creditstr;
-	}
 	
     @Override
     public String toString() {
