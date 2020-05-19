@@ -11,6 +11,16 @@ public class UfosPark implements GuestDispatcher {
 	private ArrayList<String> ufos = new ArrayList<String>(); 
 	private Map<String, String> ufoasignado = new HashMap <String, String>();
 
+	
+	
+	/** Recorre el HashMap, si ovni es igual a "null" significa que no esta asignado, entonces llama al metodo pay, 
+	 * si tiene dinero paga y se le asigna el ovni, si no lo ignora
+	 * Una persona no puede tener varios ovnis asignados
+	 * 
+	 * @param fee Es el coste del ovni
+	 * @param flota Es el mapa donde se guardan los ovnis
+	 * @see creditCard La tarjeta de credito de la persona
+	 */
 	public void dispatch(CreditCard crecard) {
 		if (this.getUfoAsignado().containsKey(crecard.number())) {
 			
@@ -23,7 +33,10 @@ public class UfosPark implements GuestDispatcher {
 		}
 		
 	}
-	
+	/** Devuelve un ovni asignado al invitado
+	 * 
+	 * @return devuelve el ovni del nombre elegido, si no tiene ovni devuelve null
+	 */
 	public String getUfoOf(String nombre) {
 		return this.ufoasignado.get(nombre);
 	}
@@ -39,6 +52,10 @@ public class UfosPark implements GuestDispatcher {
 		return flota;
 	}
 	
+	/** Añade un ovni en el map flota
+	 * 
+	 * @param flota Es el map donde se guardan los ovnis con sus ID
+	 */
 	public void add(String idovni) {
 		this.flota.add(idovni);
 		this.ufos.add(idovni);
