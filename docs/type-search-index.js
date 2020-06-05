@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"ricksy.business","l":"CreditCard"},{"p":"ricksy.business","l":"CrystalExpender"},{"p":"ricksy.business","l":"GuestDispatcher"},{"p":"ricksy.business","l":"Receptivo"},{"p":"ricksy.business","l":"RicksyBusiness"},{"p":"ricksy.business","l":"UfosPark"}]
